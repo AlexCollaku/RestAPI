@@ -1,0 +1,26 @@
+{
+  "name": "rest-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha './**/*.test.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexCollaku/RestAPI.git"
+  },
+  "keywords": [
+    "rest",
+    "api"
+  ],
+  "author": "Alex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexCollaku/RestAPI/issues"
+  },
+  "homepage": "https://github.com/AlexCollaku/RestAPI#readme",
+  "dependencies": {
+    "mocha": "^8.1.3"
+  }
+}
