@@ -1,12 +1,13 @@
 const calculateGrade = require('../src/calculateGrade.js');
 const expect = require('chai').expect;
 
-describe("Calculate Grade test", () =>{
+describe("Calculate Grade test", () => {
 
     it("Calculate 100, 100", () => {
         calculateGrade(100,100);
 
         expect(calculateGrade(100, 100).to.equal('A'));
+        //expect(calculateGrade(100, 100).to.equal('E'));
     });
 
     it("Calculate 88, 100", () => {
