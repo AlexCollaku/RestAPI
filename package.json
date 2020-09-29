@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/AlexCollaku/RestAPI#readme",
   "dependencies": {
+    "chai": "^4.2.0",
     "mocha": "^8.1.3"
   }
 }
