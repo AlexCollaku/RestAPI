@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         1. Given an array numbers, write a function to move all 0's to the end of it while
+// maintaining the relative order of the non-zero elements.
+// Example:
+// Input: [0, 1, 0, 3, 12]
+// Output: [1, 3, 12, 0, 0]
+// Note:
+// Try to:
+// - Do this in-place without making a copy of the array
+// - Minimize the total number of operations
+
+const numbers = [0, 1, 0, 3, 12];
+
+function isZero(num) {
+    
+    return num === 0;
+}
+
+const newArray = numbers.filter(isZero);
+console.log(newArray);
+
+function isNotZero(numb) {
+
+    return numb !== 0;
+}
+
+const array = numbers.filter(isNotZero);
+console.log(array);
+
+const finalArray = array.concat(newArray);
+console.log(finalArray);
+
+
+
+
+
+// 2. Write a function that takes two strings (say s and t) and determines if one string is an anagram of another.
+// For example:
+// Input: s = "anagram", t = "nagaram" // Output: true
+// Input: s = "rat", t = "car" // Output: false
+// Note:
+// You may assume the string contains only lowercase alphabets.
+
+
+let anagram = (s, t) => {
+
+    if (s.split("").sort().join() === t.split("").sort().join()) {
+
+        console.log(`${s} is anagram with ${t}`);
+    } else {
+        console.log(`${s} is not anagram with ${t}`);
+    }
+}
+
+anagram("anagram", "nagaram");
+anagram("Anagram", "nagaram");
+anagram("rat", "car");
+anagram("Rat", "car");
+
+// I don't know why I can't use .toLowerCase()
+
+
+
+
+
+// 3. Write a function that takes in an array of receipt totals (integers) and returns an array of 
+// the same totals with added sales tax % (use your local tax %). Format the numbers in 
+// the resulting array to have 2 digits after decimal point (i.e. 12.23456 > 12.23) and make sure 
+// your array values are still numbers. Use .map() method when necessary.
+// For example: [342, 1002, 523] should become [371.92, 1089.67, 568.76], given the tax of 8.875%.
+
+let receipt = [342, 1002, 523];
+
+function addTax(n) {
+
+    const num = (n * 0.08875) + n;
+
+    if (typeof num === "number") {
+
+        return num.toFixed(2);
+    }
+}
+
+const total = receipt.map(addTax);
+
+console.log(total);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
