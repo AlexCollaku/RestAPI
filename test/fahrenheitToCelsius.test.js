@@ -3,10 +3,10 @@ const expect = require('chai').expect;
 
 describe ("Converting temperature from fahrenheit to Celsius", () => {
 
-    it("verify 100°F is 37°C", () => {
+    it("verify 100°F is 37.7778°C", () => {
         fahrenheitToCelsius(100);
         
-        expect(fahrenheitToCelsius(100)).to.equal(37);
+        expect(fahrenheitToCelsius(100)).to.equal(37.7778);
         //expect(fahrenheitToCelsius(100)).to.equal(22);
     });
 
@@ -22,9 +22,9 @@ describe ("Converting temperature from fahrenheit to Celsius", () => {
         expect(fahrenheitToCelsius(32)).to.equal(0);
     });
 
-    it("verify 20°F is -6°C", () => {
+    it("verify 20°F is -6.66667°C", () => {
         fahrenheitToCelsius(20);
         
-        expect(fahrenheitToCelsius(32)).to.equal(-6);
+        expect(fahrenheitToCelsius(20)).to.equal(-6.66667);
     });
 });

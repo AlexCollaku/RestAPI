@@ -12,11 +12,17 @@ describe ("Adding tax to the receipt", () => {
 
     it("verify [342, 1002, 523] it will be [371.92, 1089.67, 568.76]", () => {
 
-        let receipt = [342, 1002, 523];
-        addTax(receipt);
-        const total = receipt.map(addTax);
+        let arrayReceipts = [342, 1002, 523];
 
-        expect(addTax(receipt)).to.equal(total);
+        expect(addTax(arrayReceipts)).to.equal([371.92, 1089.67, 568.76]);
+
+    })
+
+    it("verify when add tax in this array [-342, 0, 523]", () => {
+
+        let arrayReceipts = [-342, 0, 523];
+
+        expect(addTax(arrayReceipts)).to.equal("I can't work with 0 and negative numbers");
 
     })
 })

@@ -11,31 +11,33 @@ const expect = require('chai').expect;
 describe ("Determines if one string is an anagram of another", () => {
 
     it("verify anagram with nagaram", () => {
-        anagram("anagram", "nagaram");
+        isAnagram("anagram", "nagaram");
 
-        expect(anagram("anagram", "nagaram")).to.equal('anagram');
+        expect(isAnagram("anagram", "nagaram")).to.equal('anagram');
     });
 
     it("verify Anagram with nagaram", () => {
-        anagram("Anagram", "nagaram");
+        isAnagram("Anagram", "nagaram");
 
-        expect(anagram("Anagram", "nagaram")).to.equal('not anagram');
+        expect(isAnagram("Anagram", "nagaram")).to.equal('not anagram');
+    });
+
+    it("verify anagramat with nagaram", () => {
+        isAnagram("anagramat", "nagaram");
+
+        expect(isAnagram("anagramat", "nagaram")).to.equal(`Strings have different length`);
     });
 
     it("verify rat with car", () => {
-        anagram("rat", "car");
+        isAnagram("rat", "car");
 
-        expect(anagram("rat", "car")).to.equal('not anagram');
+        expect(isAnagram("rat", "car")).to.equal('not anagram');
     });
 
     it("verify Rat with car", () => {
-        anagram("Rat", "car");
+        isAnagram("Rat", "car");
 
-        expect(anagram("Rat", "car")).to.equal('not anagram');
+        expect(isAnagram("Rat", "car")).to.equal('not anagram');
     });
 });
-
-
-
-// I don't know why I can't use .toLowerCase()
 
